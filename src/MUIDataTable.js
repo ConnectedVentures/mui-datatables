@@ -97,6 +97,7 @@ class MUIDataTable extends React.Component {
       customToolbar: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
       customToolbarSelect: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
       customFooter: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
+      toolbarSelect: PropTypes.bool,
       onRowClick: PropTypes.func,
       resizableColumns: PropTypes.bool,
       selectableRows: PropTypes.bool,
@@ -202,6 +203,7 @@ class MUIDataTable extends React.Component {
       filterType: 'dropdown',
       pagination: true,
       textLabels,
+      toolbarSelect: true,
       expandableRows: false,
       resizableColumns: false,
       selectableRows: true,
@@ -982,7 +984,7 @@ class MUIDataTable extends React.Component {
 
     return (
       <Paper elevation={this.options.elevation} ref={this.tableContent} className={classes.paper}>
-        {selectedRows.data.length ? (
+        {this.options.toolbarSelect && selectedRows.data.length ? (
           <TableToolbarSelect
             options={this.options}
             selectedRows={selectedRows}

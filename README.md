@@ -125,7 +125,7 @@ The component accepts the following props:
 |:--:|:-----|:-----|
 |**`title`**|array|Title used to caption table
 |**`columns`**|array|Columns used to describe table. Must be either an array of simple strings or objects describing a column
-|**`data`**|array|Data used to describe table. Must be an array containing objects. (Arrays containing just strings or numbers also supported) 
+|**`data`**|array|Data used to describe table. Must be an array containing objects. (Arrays containing just strings or numbers also supported)
 |**`options`**|object|Options used to describe table
 
 #### Options:
@@ -148,6 +148,7 @@ The component accepts the following props:
 |**`customFooter`**|function||Render a custom table footer. `function(count, page, rowsPerPage, changeRowsPerPage, changePage) => string`&#124;` React Component`
 |**`customSort`**|function||Override default sorting with custom function. `function(data: array, colIndex: number, order: string) => array`
 |**`customSearch `**|function||Override default search with custom function. `customSearch(searchQuery: string, currentRow: array, columns: array) => boolean`
+|**`toolbarSelect`**|boolean||Enable or disable the rendering of the select toolbar.
 |**`elevation`**|number|4|Shadow depth applied to Paper component
 |**`caseSensitive `**|boolean|false|Enable/disable case sensitivity for search
 |**`responsive`**|string|'stacked'|Enable/disable responsive table views. Options: 'stacked', 'scroll'
