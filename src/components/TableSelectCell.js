@@ -7,11 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 const defaultSelectCellStyles = theme => ({
-  root: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
-    },
-  },
   fixedHeader: {
     position: 'sticky',
     top: '0px',
